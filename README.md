@@ -13,7 +13,7 @@ Se även: https://skl-tp.atlassian.net/browse/SKLTP-808
 
 ## Deployment av patch
 1. Ladda ned patch från: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22se.skltp.patch.cxf.rtbindingssoap%22%20AND%20a%3A%22skltp-patch-cxf-rt-bindings-soap%22
-2. Lägg skltp-patch-cxf-rt-bindings-soap-<VERSION>.jar i katalogen: mule-standalone-3.7.0/lib/user
+2. Lägg skltp-patch-cxf-rt-bindings-soap-VERSION.jar i katalogen: mule-standalone-3.7.0/lib/user
 
 ## Testning
 Testa med ett webservice-anrop (t ex till VP) som har en felaktig soapAction http-header satt.

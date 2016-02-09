@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<pingResponse xmlns="urn:riv:itinfra:tp:PingResponder:1" xmlns:ns2="http://www.w3.org/2005/08/addressing">
+			<pingUt>Ping response from test producer</pingUt>
+		</pingResponse>
+	</soap:Body>
+</soap:Envelope>

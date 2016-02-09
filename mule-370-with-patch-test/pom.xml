@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>se.skltp.patch.cxf.rtbindingssoap</groupId>
+    <artifactId>patch-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>mule-370-with-patch-test</artifactId>
+  <packaging>jar</packaging>
+  <name>${project.artifactId}</name>
+
+  <properties>
+    <skltp.mule.version>3.7.0</skltp.mule.version>
+    <skltp.soitoolkit.version>2.0.0-M6</skltp.soitoolkit.version>
+  </properties>
+
+  <dependencies>
+    <!-- dependency to patch -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>skltp-patch-cxf-rt-bindings-soap</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>mule-common-test</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.soitoolkit.commons.poms.mule-dependencies</groupId>
+      <artifactId>soitoolkit-mule-${skltp.mule.version}-dependencies</artifactId>
+      <version>${skltp.soitoolkit.version}</version>
+      <type>pom</type>
+      <exclusions>
+       <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+       </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.soitoolkit.commons.components</groupId>
+      <artifactId>soitoolkit-commons-mule</artifactId>
+      <version>${skltp.soitoolkit.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>
